@@ -1,0 +1,168 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: Arial, sans-serif; /* Mejorar la tipografía general */
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #000068;
+    display: flex;
+    align-items: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;           
+    margin: 0;           
+    display: flex;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #eaeaea;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+img {
+    margin-right: 10px;
+    max-width: 100px;
+    max-height: 100px;
+    width: auto;
+    height: auto;
+    display: block;
+}
+
+.container {
+    margin-top: 90px;
+    width: 100%;
+    min-height: 90vh; 
+    max-height: 90vh;
+    background-color: #eaeaea; /* Fondo del contenedor principal */
+    display: flex; /* Flex para alinear elementos */
+}
+
+.inicio-izquierda {
+    width: 50%; /* Ocupa la mitad del contenedor */
+    padding: 30px; /* Aumentar el padding para mayor espacio */
+    background: linear-gradient(135deg, #eaeaea 0%, #d3d3d3 100%); /* Fondo degradado */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+    overflow-y: auto; /* Desplazamiento vertical si es necesario */
+}
+
+h1, h2 {
+    color: #000068; /* Títulos en el azul del encabezado */
+    margin-bottom: 15px; /* Espacio debajo de los títulos */
+}
+
+p, label {
+    color: #333; /* Color de texto oscuro para mejor legibilidad */
+    line-height: 1.6; /* Mejora el espaciado entre líneas */
+}
+
+ul.webs {
+    padding: 0;
+}
+
+.webs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Cuatro columnas */
+    gap: 15px; /* Espacio entre tarjetas */
+}
+
+.webs .card {
+    background-color: #000068; /* Fondo azul */
+    color: #fff; /* Texto blanco */
+    border-radius: 15px; /* Bordes redondeados */
+    padding: 20px;
+    text-align: center;
+    min-height: 10vh; /* Altura mínima */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.webs .card a {
+    color: #fff; /* Asegurar que los enlaces sean blancos */
+    text-decoration: none; /* Sin subrayado */
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: calc(100% - 20px); /* Ancho completo menos padding */
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 5px; /* Bordes redondeados para inputs */
+}
+
+button {
+    background-color: #000068; /* Botón en azul */
+    color: #fff; /* Texto blanco */
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor a pointer */
+    transition: background-color 0.3s ease; /* Transición suave al hover */
+}
+
+button:hover {
+    background-color: #003399; /* Color más claro al pasar el mouse */
+}
+.github-features {
+    display: grid; /* Usar Grid Layout */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Filas automáticas, cada celda mínima de 250px */
+    gap: 15px; /* Espacio entre los elementos */
+    margin: 15px 0; /* Espacio alrededor de la cuadrícula */
+    background-color: #eaeaea; /* Mismo color de fondo que el contenedor */
+    padding: 20px; /* Padding interno */
+    border-radius: 15px; /* Bordes redondeados */
+}
+
+.feature {
+    background-color: #fff; /* Fondo blanco para las características */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 15px; /* Padding interno */
+    transition: box-shadow 0.3s ease; /* Transición suave para la sombra */
+}
+
+.feature:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra al pasar el mouse */
+}
+
+.feature p {
+    margin: 5px 0 0; /* Espacio arriba del párrafo */
+    color: #555; /* Color de texto más claro */
+}
+.inicio-derecha {
+    width: 50%; /* Ocupa la mitad del contenedor */
+    padding: 30px; /* Espaciado interno */
+    background-color: #eaeaea; /* Fondo del contenedor derecho */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Sombra */
+    overflow-y: auto; /* Desplazamiento vertical si es necesario */
+}
+.support-link {
+    color: #000068; /* Color azul */
+    font-weight: bold; /* Negrita para destacar */
+    text-decoration: underline; /* Subrayado para resaltar como enlace */
+}
+
+.support-link:hover {
+    color: #003399; /* Color más claro al pasar el mouse */
+}
