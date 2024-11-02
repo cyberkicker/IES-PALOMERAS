@@ -124,6 +124,7 @@ button:hover {
     background-color: #003399; /* Color más claro al pasar el mouse */
 }
 .github-features {
+    overflow-y: auto;
     display: grid; /* Usar Grid Layout */
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Filas automáticas, cada celda mínima de 250px */
     gap: 15px; /* Espacio entre los elementos */
@@ -131,6 +132,9 @@ button:hover {
     background-color: #eaeaea; /* Mismo color de fondo que el contenedor */
     padding: 20px; /* Padding interno */
     border-radius: 15px; /* Bordes redondeados */
+    max-height: 34vh;
+    color: #000068;
+    font-weight: bold;
 }
 
 .feature {
@@ -165,4 +169,122 @@ button:hover {
 
 .support-link:hover {
     color: #003399; /* Color más claro al pasar el mouse */
+}
+.web-item {
+    margin-bottom: 20px; /* Espaciado entre elementos */
+    text-align: center; /* Centrar el contenido */
+}
+
+.grafica {
+    display: none; /* Ocultar la gráfica por defecto */
+    margin-top: 10px;
+}
+
+.card:hover + .grafica {
+    display: flex; /* Mostrar la gráfica al pasar el ratón sobre la tarjeta */
+    justify-content: center; /* Centrar la gráfica */
+}
+.faq-item {
+    background-color: #fff; /* Fondo blanco para el ítem */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 15px; /* Padding interno */
+    margin-bottom: 15px; /* Espaciado entre ítems */
+    transition: box-shadow 0.3s ease; /* Transición suave para la sombra */
+}
+
+.faq-item strong {
+    color: #000068; /* Color azul para las preguntas */
+    display: block; /* Asegurarse de que el texto fuerte esté en una nueva línea */
+    margin-bottom: 5px; /* Espaciado debajo del texto fuerte */
+}
+
+.faq-item:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra al pasar el mouse */
+}
+
+.faq-item p {
+    color: #555; /* Color de texto más claro para las respuestas */
+    margin: 0; /* Sin margen para mantener el espaciado consistente */
+}
+@media (max-width: 768px) {
+    body {
+        padding: 0 10px; /* Espacio lateral */
+    }
+
+    nav {
+        height: 70px; /* Altura reducida */
+    }
+
+    nav ul {
+        flex-direction: row; /* Mantener elementos en fila */
+        justify-content: space-around; /* Espacio entre elementos */
+        align-items: center; /* Centrar elementos */
+    }
+
+    li {
+        margin: 0 15px; /* Espacio horizontal entre elementos de la lista */
+    }
+
+    a {
+        font-size: 20px; /* Tamaño de fuente para enlaces */
+    }
+
+    .container {
+        flex-direction: column; /* Cambiar a columna */
+        margin-top: 70px; /* Margen superior */
+        width: 100%; /* Ancho completo */
+    }
+
+    .inicio-izquierda, .inicio-derecha {
+        width: 100%; /* Cada sección ocupa todo el ancho */
+        padding: 20px; /* Espaciado interno */
+        box-sizing: border-box; /* Incluir padding en el cálculo del ancho */
+    }
+
+    h1, h2 {
+        font-size: 20px; /* Ajustar tamaños de los títulos */
+    }
+
+    .webs {
+        display: grid; /* Usar grid para las tarjetas */
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+        gap: 15px; /* Espacio entre tarjetas */
+        width: 100%; /* Ancho completo */
+    }
+
+    .webs .card {
+        padding: 15px; /* Padding ajustado */
+    }
+
+    input[type="text"], input[type="email"], textarea {
+        width: calc(100% - 20px); /* Ancho completo menos padding */
+        font-size: 16px; /* Tamaño de fuente ajustado */
+    }
+
+    button {
+        width: 100%; /* Botón ocupa todo el ancho */
+        padding: 12px; /* Ajustar padding */
+        font-size: 16px; /* Ajustar tamaño de fuente */
+    }
+
+    .github-features {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas para las características */
+        max-height: none; /* Sin límite de altura */
+        margin-bottom: 20px; /* Espacio debajo */
+    }
+
+    .feature {
+        padding: 10px; /* Padding reducido */
+    }
+
+    .faq-item {
+        padding: 10px; /* Padding reducido */
+    }
+
+    .grafica {
+        display: flex; /* Mostrar la gráfica */
+        margin-top: 10px; /* Espacio encima */
+        justify-content: center; /* Centrar contenido */
+    }
 }
