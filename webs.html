@@ -6,6 +6,7 @@
     <title>ASW - Webs</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <!-- Start -->
@@ -13,34 +14,164 @@
         <ul>
             <li><a href="index.html"><img src="img/logo.png" alt="logo"></a></li>
             <li><a href="index.html">Productos</a></li>
-            <li><a href="">Código</a></li>
             <li><a href="webs.html">Webs</a></li>
             <li><a href="soporte.html">Soporte</a></li>
+            <li><a href="pro.html"><i class="fas fa-dollar-sign"></i> Pro</a></li>
         </ul>
     </nav>
     <!-- End -->
 
     <div class="container">
         <div class="inicio-izquierda">
-
+            <h2>¿Quiénes somos?</h2>
+            <p>En ASW, ofrecemos servicios de desarrollo web personalizados para empresas de todos los tamaños. Nuestro objetivo es ayudar a nuestros clientes a crear una presencia en línea efectiva y atractiva.</p>
+            
+            <h2>¿Qué ofrecemos?</h2>
+            <div class="github-features">
+                <div class="feature">
+                    <strong>Subdominios:</strong>
+                    <p>Espacios dedicados donde nuestros usuarios pueden crear y gestionar su propia web dentro de nuestra plataforma.</p>
+                </div>
+                <div class="feature">
+                    <strong>Colaboración Premium:</strong>
+                    <p>Acceso a revisión y optimización de su código HTML, CSS y más, para mejorar la calidad de sus proyectos.</p>
+                </div>
+                <div class="feature">
+                    <strong>Optimización SEO:</strong>
+                    <p>Asesoría para mejorar la visibilidad en buscadores y atraer más visitantes a sus sitios.</p>
+                </div>
+                <div class="feature">
+                    <strong>Soporte Técnico:</strong>
+                    <p>Asistencia continua para asegurar que tu web funcione sin problemas y esté siempre actualizada.</p>
+                </div>
+                <div class="feature">
+                    <strong>Integraciones de Terceros:</strong>
+                    <p>Conecta tu web con herramientas y servicios externos para mejorar su funcionalidad y rendimiento.</p>
+                </div>
+                <div class="feature">
+                    <strong>Panel de Control Intuitivo:</strong>
+                    <p>Gestiona tu sitio fácilmente con una interfaz amigable que permite realizar cambios sin complicaciones.</p>
+                </div>
+                <div class="feature">
+                    <strong>Plantillas Personalizables:</strong>
+                    <p>Acceso a una variedad de plantillas que puedes personalizar para adaptarlas a tu marca y estilo.</p>
+                </div>
+                <div class="feature">
+                    <strong>Analíticas y Reportes:</strong>
+                    <p>Herramientas para analizar el tráfico de tu web y obtener información valiosa sobre el comportamiento de los usuarios.</p>
+                </div>
+            </div>
+            
+            <h2>Explora nuestras creaciones</h2>
+            <p>A la derecha, encontrarás webs creadas por nuestros usuarios utilizando nuestros servicios. Cada proyecto refleja nuestra plataforma en acción. ¡Haz clic en cada enlace para descubrir sus páginas!</p>
         </div>
         <div class="inicio-derecha">
             <h2>Webs</h2>
             <div class="webs">
-                <div class="card">
-                    <a href="Rhommel/">Web de Rhommel</a>
+                <div class="web-item">
+                    <div class="card">
+                        <a href="Rhommel/">Web de Rhommel</a>
+                    </div>
+                    <div class="grafica">
+                        <canvas id="graficaRhommel" width="200" height="100"></canvas>
+                    </div>
                 </div>
-                <div class="card">
-                    <a href="Brandon/">Web de Brandon</a>
+                
+                <div class="web-item">
+                    <div class="card">
+                        <a href="Brandon/">Web de Brandon</a>
+                    </div>
+                    <div class="grafica">
+                        <canvas id="graficaBrandon" width="200" height="100"></canvas>
+                    </div>
                 </div>
-                <div class="card">
-                    <a href="Javier/">Web de Javier</a>
+                
+                <div class="web-item">
+                    <div class="card">
+                        <a href="Javier/">Web de Javier</a>
+                    </div>
+                    <div class="grafica">
+                        <canvas id="graficaJavier" width="200" height="100"></canvas>
+                    </div>
                 </div>
-                <div class="card">
-                    <a href="Marcos/">Web de Marcos</a>
+                
+                <div class="web-item">
+                    <div class="card">
+                        <a href="Marcos/">Web de Marcos</a>
+                    </div>
+                    <div class="grafica">
+                        <canvas id="graficaMarcos" width="200" height="100"></canvas>
+                    </div>
                 </div>
             </div>
         </div>
+        
+        
+        
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctxRhommel = document.getElementById('graficaRhommel').getContext('2d');
+        const ctxBrandon = document.getElementById('graficaBrandon').getContext('2d');
+        const ctxJavier = document.getElementById('graficaJavier').getContext('2d');
+        const ctxMarcos = document.getElementById('graficaMarcos').getContext('2d');
+    
+        const graficaRhommel = new Chart(ctxRhommel, {
+            type: 'line', // Cambia el tipo de gráfico si deseas
+            data: {
+                labels: ['Enero', 'Febrero', 'Marzo', 'Abril'],
+                datasets: [{
+                    label: 'Visitas',
+                    data: [30, 50, 75, 100],
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 2,
+                    fill: false
+                }]
+            }
+        });
+    
+        const graficaBrandon = new Chart(ctxBrandon, {
+            type: 'line',
+            data: {
+                labels: ['Enero', 'Febrero', 'Marzo', 'Abril'],
+                datasets: [{
+                    label: 'Visitas',
+                    data: [20, 40, 60, 80],
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    borderWidth: 2,
+                    fill: false
+                }]
+            }
+        });
+    
+        const graficaJavier = new Chart(ctxJavier, {
+            type: 'line',
+            data: {
+                labels: ['Enero', 'Febrero', 'Marzo', 'Abril'],
+                datasets: [{
+                    label: 'Visitas',
+                    data: [10, 30, 50, 70],
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 2,
+                    fill: false
+                }]
+            }
+        });
+    
+        const graficaMarcos = new Chart(ctxMarcos, {
+            type: 'line',
+            data: {
+                labels: ['Enero', 'Febrero', 'Marzo', 'Abril'],
+                datasets: [{
+                    label: 'Visitas',
+                    data: [40, 60, 80, 100],
+                    borderColor: 'rgba(255, 206, 86, 1)',
+                    borderWidth: 2,
+                    fill: false
+                }]
+            }
+        });
+    </script>
+    
 </body>
 </html>
