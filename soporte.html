@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atención al Cliente</title>
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Incluimos iconos (Font Awesome o similar) para la i de información -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    
+    <nav>
+        <ul class="nav-left">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="productos.html">Nuestros Productos</a></li>
+            <li><a href="registros.html">Regístrate</a></li>
+        </ul>
+        <ul class="logo"><li><a href="index.html"><img src="img/logo.png" alt="Logo de la empresa"></a></li></ul>
+        <ul class="nav-right">
+            <li><a href="servicios.html">Servicios Profesionales</a></li>
+            <li><a href="soporte.html">Atención al Cliente</a></li>
+            <li><a href="premium.html">Planes Premium</a></li>
+        </ul>
+    </nav>
+
+    <div class="contenedor">
+        <!-- Sección de Soporte -->
+        <section class="registro">
+            <h1>Atención al Cliente</h1>
+            <p>Si necesitas soporte, por favor completa el siguiente formulario. Nuestro equipo se pondrá en contacto contigo lo antes posible.</p>
+
+            <form action="procesar_soporte.php" method="POST" class="formulario-registro">
+                
+                <!-- Campo de Usuario GitHub -->
+                <label for="github">Usuario de GitHub</label>
+                <input type="text" id="github" name="github" class="input" placeholder="Ingresa tu usuario de GitHub" required>
+
+                <!-- Campo de Correo -->
+                <label for="correo">Correo Electrónico 
+                    <span class="tooltip">
+                        <i class="fas fa-info-circle"></i>
+                        <span class="tooltiptext">Nos pondremos en contacto contigo por este medio.</span>
+                    </span>
+                </label>
+                <input type="email" id="correo" name="correo" class="input" placeholder="Ingresa tu correo electrónico" required>
+
+                <!-- Descripción del Incidente -->
+                <label for="incidente">Descripción del Incidente</label>
+                <textarea id="incidente" name="incidente" class="textarea" placeholder="Por favor, describe tu incidente o consulta" required></textarea>
+
+                <!-- Botón de Envío -->
+                <button type="submit" class="btn-submit">Enviar</button>
+            </form>
+        </section>
+    </div>
+
+</body>
+</html>

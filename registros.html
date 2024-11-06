@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Incluimos iconos (Font Awesome o similar) para la i de información -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    
+    <nav>
+        <ul class="nav-left">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="productos.html">Nuestros Productos</a></li>
+            <li><a href="registros.html">Regístrate</a></li>
+        </ul>
+        <ul class="logo"><li><a href="index.html"><img src="img/logo.png" alt="Logo de la empresa"></a></li></ul>
+        <ul class="nav-right">
+            <li><a href="servicios.html">Servicios Profesionales</a></li>
+            <li><a href="soporte.html">Atención al Cliente</a></li>
+            <li><a href="premium.html">Planes Premium</a></li>
+        </ul>
+    </nav>
+
+    <div class="contenedor">
+        <!-- Sección de Registro -->
+        <section class="registro">
+            <h1>Regístrate</h1>
+            <p>Por favor, completa el formulario para crear una cuenta.</p>
+
+            <form action="procesar_registro.php" method="POST" class="formulario-registro">
+                
+                <!-- Campo de Usuario GitHub -->
+                <label for="github">Usuario de GitHub</label>
+                <input type="text" id="github" name="github" placeholder="Ingresa tu usuario de GitHub" required>
+
+                <!-- Campo de Correo -->
+                <label for="correo">Correo Electrónico 
+                    <span class="tooltip">
+                        <i class="fas fa-info-circle"></i>
+                        <span class="tooltiptext">Respondemos a este correo</span>
+                    </span>
+                </label>
+                <input type="email" id="correo" name="correo" placeholder="Ingresa tu correo electrónico" required>
+
+
+                <!-- Estudio (checkbox) -->
+                <fieldset>
+                    <legend>Estudios</legend>
+                    <label>
+                        <input type="checkbox" name="estudios[]" value="smr"> SMR (Sistemas Microinformáticos y Redes)
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="estudios[]" value="asir"> ASIR (Administración de Sistemas Informáticos en Red)
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="estudios[]" value="dam"> DAM (Desarrollo de Aplicaciones Multiplataforma)
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="estudios[]" value="daw"> DAW (Desarrollo de Aplicaciones Web)
+                    </label><br>
+                    <!-- Nueva opción "No tengo estudios" -->
+                    <label>
+                        <input type="checkbox" name="estudios[]" value="no_estudios"> No tengo estudios
+                    </label><br>
+                </fieldset>
+
+                <!-- Experiencia -->
+                <label for="experiencia">¿Tienes experiencia? (Sí/No)</label>
+                <select id="experiencia" name="experiencia" required>
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+
+                <!-- Campo de experiencia detallada -->
+                <div id="experiencia_detalle" style="display:none;">
+                    <label for="detalles_experiencia">Cuéntanos más sobre tu experiencia</label>
+                    <textarea id="detalles_experiencia" name="detalles_experiencia" placeholder="Describe tu experiencia"></textarea>
+                </div>
+
+                <!-- Botón de Envío -->
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </div>
+
+</body>
+</html>
