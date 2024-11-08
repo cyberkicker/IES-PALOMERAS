@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-navbar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css"> <!-- Enlace al archivo CSS externo -->
+</head>
+<body>
+
+    <!-- Barra 1: Marca -->
+    <div class="navbar-brand">
+        <span>Mi Marca</span>
+    </div>
+
+    <!-- Barra 2: Opciones principales -->
+    <div class="navbar-main">
+        <a href="#home">Inicio</a>
+        
+        <!-- Barra de "Servicios" con submenú -->
+        <a href="#services" id="services-link" class="has-submenu">Servicios</a>
+        <div class="navbar-sub" id="services-submenu">
+            <a href="#consulting">Consultoría</a>
+            <a href="#design">Diseño</a>
+            <a href="#development">Desarrollo</a>
+            <a href="#marketing">Marketing Digital</a>
+            <a href="#seo">SEO y SEM</a>
+            <a href="#web-design">Diseño Web</a>
+            <a href="#app-development">Desarrollo de Apps</a>
+            <a href="#branding">Branding</a>
+            <a href="#content-writing">Redacción de Contenidos</a>
+            <a href="#advertising">Publicidad</a>
+        </div>
+
+        <!-- Barra de "Acerca de" con submenú -->
+        <a href="#about" id="about-link" class="has-submenu">Acerca de</a>
+        <div class="navbar-sub" id="about-submenu">
+            <a href="#company">La Empresa</a>
+            <a href="#team">Nuestro Equipo</a>
+            <a href="#mission">Misión y Visión</a>
+            <a href="#values">Nuestros Valores</a>
+            <a href="#history">Nuestra Historia</a>
+            <a href="#partnerships">Alianzas</a>
+            <a href="#awards">Premios</a>
+            <a href="#social-responsibility">Responsabilidad Social</a>
+            <a href="#community">Comunidad</a>
+        </div>
+
+        <a href="#contact">Contacto</a>
+    </div>
+
+    <!-- Contenido principal para demostrar el desplazamiento -->
+    <section id="content">
+      <article>
+        <h1>Contenido de la web...</h1>
+      </article>
+    </section>
+
+    <script src="script.js"></script> <!-- Enlace al archivo JS externo -->
+</body>
+</html>
